@@ -42,12 +42,12 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info['podcast_details']['podcast_guest'])
+            st.write(podcast_info['podcast_guest'])
 
 
         # Display the five key moments
         st.subheader("Key Moments")
-        key_moments = podcast_info['podcast_details']['podcast_highlights']
+        key_moments = podcast_info['podcast_highlights']
         for moment in key_moments.split('\n'):
             st.markdown(
                 f"<p style='margin-bottom: 5px;'>{moment}</p>", unsafe_allow_html=True)
@@ -87,11 +87,8 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            st.write(podcast_info['podcast_guest']['name'])
+            st.write(podcast_info['podcast_guest'])
 
-        with col4:
-            st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"]['summary'])
 
         # Display the five key moments
         st.subheader("Key Moments")
